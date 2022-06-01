@@ -1,0 +1,74 @@
+<div class="bg">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-info mb-5">
+    <a class="navbar-brand text-dark" href="#">Ignite Pharmacy</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a *ngIf="!loginService.isUserLoggedIn()&&!service.isCustomerLoggedIn()" routerLink="home"
+            routerLinkActive="active" class="nav-link text-dark">Home</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn() && !service.isCustomerLoggedIn()" routerLink="adminHome"
+            routerLinkActive="active" class="nav-link text-dark">Home</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="service.isCustomerLoggedIn()" routerLink="customerHome" routerLinkActive="active"
+            class="nav-link text-dark">Home</a>
+        </li>
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle text-dark" *ngIf="loginService.isUserLoggedIn()"
+            id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Medicine</a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item text-dark" *ngIf="loginService.isUserLoggedIn()" routerLink="createMedicine"
+              routerLinkActive="active">Add Medicine</a>
+            <a class="dropdown-item text-dark" *ngIf="loginService.isUserLoggedIn()" routerLink="medicine"
+              routerLinkActive="active">View Medicine Details</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="medicineSalestoCustomer" routerLinkActive="active"
+            class="nav-link text-dark">Sell Medicine</a>
+        </li>
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle text-dark" *ngIf="loginService.isUserLoggedIn()"
+            id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Records</a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item text-dark" *ngIf="loginService.isUserLoggedIn()" routerLink="order"
+              routerLinkActive="active">View Orders to be Placed</a>
+            <a class="dropdown-item text-dark" *ngIf="loginService.isUserLoggedIn()" routerLink="dailySales"
+              routerLinkActive="active">Day Wise Sales</a>
+          </div>
+        </li>
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle text-dark" *ngIf="loginService.isUserLoggedIn()"
+            id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Customer</a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item text-dark" *ngIf="loginService.isUserLoggedIn()" routerLink="addCustomerByAdmin"
+              routerLinkActive="active">Add Customer</a>
+            <a class="dropdown-item text-dark" *ngIf="loginService.isUserLoggedIn()" routerLink="customer"
+              routerLinkActive="active">View Customer Details</a>
+          </div>
+        </li>        
+        <li class="nav-item">
+          <a *ngIf="service.isCustomerLoggedIn()" routerLink="viewMedicine" routerLinkActive="active"
+            class="nav-link text-dark">Medicine</a>
+        </li>
+        <li *ngIf="!loginService.isUserLoggedIn()&&!service.isCustomerLoggedIn()" style="width: 100px;" ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle text-dark" id="dropdownId" data-toggle="dropdown"
+            style="margin-right: 30px;" aria-haspopup="true" aria-expanded="false">Login</a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownId">
+            <a routerLink="login" routerLinkActive="active" class="nav-link text-dark">Admin</a>
+            <a routerLink="customerRegistrationLogin" routerLinkActive="active" class="nav-link text-dark">Customer</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="loginService.isUserLoggedIn() || service.isCustomerLoggedIn()" routerLink="logout"
+            routerLinkActive="active" class="nav-link text-dark" style="margin-right: 20px;">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,23 @@
+[INFO ] 2022-05-31 22:36:11.980 [main] MedicineController - Inside update medicine by id method medicine controller
+[INFO ] 2022-05-31 22:36:12.515 [main] MedicineController - Inside create medicine method medicine controller
+[INFO ] 2022-05-31 22:36:12.554 [main] MedicineController - Inside delete medicine by id method medicine controller
+[INFO ] 2022-05-31 22:36:12.623 [main] MedicineController - Inside get all medicines method medicine controller
+[INFO ] 2022-05-31 22:36:12.667 [main] MedicineController - Inside get medicine by id method medicine controller
+[INFO ] 2022-05-31 22:36:18.504 [main] SalesController - Inside add sales method of sales controller
+[INFO ] 2022-05-31 22:36:18.535 [main] SalesController - Inside get all sales method of sales controller
+[INFO ] 2022-05-31 22:36:19.837 [main] CustomerController - Inside get customer by id method of customer controller
+[INFO ] 2022-05-31 22:36:19.902 [main] CustomerController - Inside get customer name of customer controller
+[INFO ] 2022-05-31 22:36:19.957 [main] CustomerController - Inside get customer by phone method of customer controller
+[INFO ] 2022-05-31 22:36:20.008 [main] CustomerController - Inside get all customers method of customer controller
+[INFO ] 2022-05-31 22:36:20.047 [main] CustomerController - Inside update customer by id method of customer controller
+[INFO ] 2022-05-31 22:36:20.113 [main] CustomerController - Inside create customer method of customer controller
+[INFO ] 2022-05-31 22:36:20.130 [main] CustomerController - Inside delete customer by id method of customer controller
+[INFO ] 2022-05-31 22:46:36.288 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules
+[INFO ] 2022-05-31 23:26:51.238 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules
+[INFO ] 2022-05-31 23:26:58.918 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules
+[INFO ] 2022-05-31 23:27:25.328 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules
+[INFO ] 2022-05-31 23:27:30.295 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules
+[INFO ] 2022-05-31 23:32:50.454 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules
+[INFO ] 2022-05-31 23:37:31.581 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules
+[INFO ] 2022-05-31 23:48:20.941 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules
+[INFO ] 2022-05-31 23:58:01.480 [restartedMain] MedicalStoreManagementSystemApplication - Info Message Logged !!!..You are inside application. Now you can access modules

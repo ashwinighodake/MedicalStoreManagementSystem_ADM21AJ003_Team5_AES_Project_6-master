@@ -1,0 +1,12 @@
+h3{
+    text-align: center;
+    color: blueviolet;
+}
+
+.container{
+    /* border: 2px black solid; */
+    background-color: wheat;
+    margin-top: 50px;
+    width: 600px;
+    border-radius: 5%;
+}

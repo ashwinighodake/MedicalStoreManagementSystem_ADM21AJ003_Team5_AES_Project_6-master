@@ -1,0 +1,69 @@
+<div *ngIf="error" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Alert!</strong> Already Registered with given Phone Number or Username exists.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="container">
+    <div class="col-md-10 offset-md-1">
+        <br>
+        <h3>Customer Registration</h3>
+        <form class="form-inline " #loginform="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Customer Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="customer.name" name="name" minlength="1"
+                    maxlength="20" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched">
+                <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required and length
+                    should be minimum 1 character and maximum 20 characters</small>
+            </div>
+
+            <div class="form-group">
+                <label>Village</label>
+                <input type="text" class="form-control" id="village" [(ngModel)]="customer.village" name="village"
+                    minlength="1" maxlength="20" required #villageName="ngModel"
+                    [class.is-invalid]="villageName.invalid && villageName.touched">
+                <small class="text-danger" [class.d-none]="villageName.valid || villageName.untouched">Village Name is
+                    required and length should be minimum 1 character and maximum 20 characters</small>
+            </div>
+
+            <div class="form-group">
+                <label>PinCode</label>
+                <input type="text" class="form-control" id="pincode" [(ngModel)]="customer.pincode" name="pincode"
+                    minlength="6" maxlength="6" required #pincode="ngModel"
+                    [class.is-invalid]="pincode.invalid && pincode.touched">
+                <small class="text-danger" [class.d-none]="pincode.valid || pincode.untouched">Pincode is required and
+                    length should be 6 characters</small>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" class="form-control" id="phone" [(ngModel)]="customer.phone" name="phone"
+                    minlength="10" maxlength="10" pattern="[7-9]{1}[0-9]{9}" required #phone="ngModel"
+                    [class.is-invalid]="phone.invalid && phone.touched">
+                <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone Number is required and
+                    Starts with 7/8/9 <br> length should be 10 characters</small>
+            </div>
+
+            <div class="form-group">
+                <label>UserName</label>
+                <input type="text" class="form-control" id="username" [(ngModel)]="customer.username" name="username"
+                    minlength="5" maxlength="15" required #username="ngModel"
+                    [class.is-invalid]="username.invalid && username.touched">
+                <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required
+                    and length should be between 5 t0 15 characters</small>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="customer.password" minlength="4"
+                    maxlength="10" name="password" required #password="ngModel"
+                    [class.is-invalid]="password.invalid && password.touched">
+                <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required
+                    and length should be between 4 characters and 10 characters</small>
+
+            </div>
+
+            <button [disabled]="loginform.invalid" class="mt-2 mb-2 btn btn-success" type="submit"
+                value="Submit">Submit</button><br><br>
+        </form>
+    </div>
+
+</div>

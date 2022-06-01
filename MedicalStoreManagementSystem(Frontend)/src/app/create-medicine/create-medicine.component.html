@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="col-md-8 offset-md-2">
+        <h3>Add Medicine</h3>
+        <form #addMedicine="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Medicine Name</label>
+                <input type="text" class="form-control" id="name" [(ngModel)]="medicine.name" name="name" required
+                    #name="ngModel" [class.is-invalid]="name.invalid && name.touched">
+                <small class="text-danger" [class.d-none]="name.valid || name.untouched">Medicine Name is
+                    Required</small>
+            </div>
+
+            <div class="form-group">
+                <label>Medicine Company</label>
+                <input type="text" class="form-control" id="companyName" [(ngModel)]="medicine.companyName"
+                    name="companyName" required #companyName="ngModel"
+                    [class.is-invalid]="companyName.invalid && companyName.touched">
+                <small class="text-danger" [class.d-none]="companyName.valid || companyName.untouched">Company Name is
+                    Required and cannot be null</small>
+            </div>
+
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" class="form-control" id="price" [(ngModel)]="medicine.price" name="price" required
+                    #price="ngModel" [class.is-invalid]="price.invalid && price.touched">
+                <small class="text-danger" [class.d-none]="price.valid || price.untouched">Price is Required and cannot
+                    be null</small>
+            </div>
+
+            <div class="form-group">
+                <label>Quantity</label>
+                <input type="number" class="form-control" id="quantity" [(ngModel)]="medicine.quantity" name="quantity"
+                    required #quantity="ngModel" [class.is-invalid]="quantity.invalid && quantity.touched">
+                <small class="text-danger" [class.d-none]="quantity.valid || quantity.untouched">Quantity is Required
+                    and cannot be null</small>
+            </div>
+
+            <div class="form-group">
+                <label>Expiry Date</label>
+                <input type="date" class="form-control" id="expiryDate" [(ngModel)]="medicine.expiryDate"
+                    name="expiryDate" required #expiryDate="ngModel"
+                    [class.is-invalid]="expiryDate.invalid && expiryDate.touched">
+                <small class="text-danger" [class.d-none]="expiryDate.valid || expiryDate.untouched">Expiry Date is
+                    Required and cannot be null</small>
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+                <input type="text" class="form-control" id="category" [(ngModel)]="medicine.category" name="category"
+                    required #category="ngModel" [class.is-invalid]="category.invalid && category.touched">
+                <small class="text-danger" [class.d-none]="category.valid || category.untouched">Category is Required
+                    and cannot be null</small>
+            </div>
+
+            <button [disabled]="addMedicine.invalid" class="mt-2 mb-1 btn btn-success" type="submit"
+                value="Submit">Submit</button>
+        </form>
+    </div>
+</div>

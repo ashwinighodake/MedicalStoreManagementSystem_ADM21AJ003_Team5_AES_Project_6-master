@@ -1,0 +1,40 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label class="col-form-label">Enter the Date You want to Search:</label>
+        </div>
+        <div class="col-auto">
+            <input [(ngModel)]="sales.date" name="date" type="date" class="form-control">
+        </div>
+        <div class="col-auto">
+            <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+</form>
+<table class="table mt-3 table-striped table-bordered table-dark">
+    <thead>
+        <tr>
+            <td>S.No</td>
+            <td>Medicine Name</td>
+            <td>Customer Name</td>
+            <td>Mobile Number</td>
+            <td>Quantity</td>
+            <td>Amount</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of salesList ;index as i">
+            <td>{{i+1}}</td>
+            <td>{{list.medicine.name | titlecase}}</td>
+            <td>{{list.customer.name | titlecase}}</td>
+            <td>{{list.customer.phone}}</td>
+            <td>{{list.quantity}}</td>
+            <td>{{list.amount}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="nodata" colspan="6">{{msg}}</td>
+        </tr>
+    </tfoot>
+</table>

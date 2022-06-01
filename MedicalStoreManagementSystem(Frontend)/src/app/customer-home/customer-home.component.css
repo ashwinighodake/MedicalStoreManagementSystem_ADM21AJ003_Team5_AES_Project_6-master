@@ -1,0 +1,16 @@
+
+h1{
+    text-align: center;
+    color: wheat;
+    margin-left: 450px;
+    margin-top: 300px;
+}
+
+p{
+    margin-top: 10px;
+    color: wheat;
+    font-size: 20px;
+}
+p:nth-child(1){
+    float: right;
+}

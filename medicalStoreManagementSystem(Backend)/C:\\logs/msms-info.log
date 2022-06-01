@@ -1,0 +1,6 @@
+[INFO ] 2022-06-01 00:00:19.915 [http-nio-8998-exec-1] AdminController - Inside get admin by username method of admin controller
+[INFO ] 2022-06-01 00:00:58.741 [http-nio-8998-exec-2] MedicineController - Inside get all medicines method medicine controller
+[INFO ] 2022-06-01 00:01:13.621 [http-nio-8998-exec-4] MedicineController - Inside delete medicine by id method medicine controller
+[INFO ] 2022-06-01 00:01:13.825 [http-nio-8998-exec-6] MedicineController - Inside get all medicines method medicine controller
+[INFO ] 2022-06-01 00:01:20.771 [http-nio-8998-exec-7] CustomerController - Inside get all customers method of customer controller
+[INFO ] 2022-06-01 00:01:22.819 [http-nio-8998-exec-8] MedicineController - Inside get Orders of medicine to be placed method medicine controller
